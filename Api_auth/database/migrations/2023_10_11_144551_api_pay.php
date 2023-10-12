@@ -11,7 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('api_pays', function (Blueprint $table) {
+            $table->id();
+            $table->string('phone');
+            $table->string('reference');
+            $table->string('date_pay');
+            $table->integer('status');
+            $table->timestamps();
+        });
     }
 
     /**

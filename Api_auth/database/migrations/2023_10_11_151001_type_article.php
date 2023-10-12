@@ -11,7 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('type_articles', function (Blueprint $table) {
+            $table->id('ta');
+            $table->string('nom_type_a');
+            $table->text('image_type_a');
+            $table->text('description_type_a');
+            $table->integer('etat_type_a');
+            $table->timestamps();
+        });
     }
 
     /**

@@ -11,7 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('code_paiement_aac', function (Blueprint $table) {
+            $table->id('paac');
+            $table->integer('code_client');
+            $table->string('code_agent');
+            $table->string('code_code');
+            $table->string('code_date');
+            $table->integer('code_etat');
+            $table->timestamps();
+        });
     }
 
     /**

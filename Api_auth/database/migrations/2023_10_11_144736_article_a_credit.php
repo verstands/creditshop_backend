@@ -11,7 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('article_a_credits', function (Blueprint $table) {
+            $table->id('aac');
+            $table->integer('aac_id_credits');
+            $table->integer('aac_id_articles');
+            $table->string('aac_nom_article');
+            $table->integer('aac_prix_article');
+            $table->integer('aac_livraison_art');
+            $table->integer('aac_etat_article');
+            $table->timestamps();
+        });
     }
 
     /**

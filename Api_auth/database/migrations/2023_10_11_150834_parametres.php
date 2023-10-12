@@ -11,7 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('parametres', function (Blueprint $table) {
+            $table->id('pt');
+            $table->integer('parametre_taux_echange');
+            $table->integer('parametre_pc_AchatCredit');
+            $table->integer('parametre_commission_agent');
+            $table->integer('parametre_commission_sts');
+            $table->integer('parametres_delai_paie');
+            $table->integer('parametres_echance_paie');
+            $table->integer('parametre_etat');
+            $table->timestamps();
+        });
     }
 
     /**

@@ -11,7 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('paiement_achat_credits', function (Blueprint $table) {
+            $table->id('pc');
+            $table->integer('paiement_client');
+            $table->integer('paiement_montant');
+            $table->string('paiement_date');
+            $table->string('paiement_agent');
+            $table->integer('paiement_vu_chef');
+            $table->integer('paiement_etat');
+            $table->timestamps();
+        });
     }
 
     /**

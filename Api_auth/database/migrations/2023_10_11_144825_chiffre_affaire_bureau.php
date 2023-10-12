@@ -11,7 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('chiffre_affaire_bureaus', function (Blueprint $table) {
+            $table->id('cab');
+            $table->integer('chiffre_cab');
+            $table->integer('chiffre_etat');
+            $table->timestamps();
+        });
     }
 
     /**

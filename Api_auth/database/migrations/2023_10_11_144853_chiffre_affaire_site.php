@@ -11,7 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('chiffre_affaire_sites', function (Blueprint $table) {
+            $table->id('site_cas');
+            $table->integer('site_id_site');
+            $table->integer('site_montant_encais');
+            $table->integer('site_chiffre_generale');
+            $table->integer('site_etat');
+            $table->timestamps();
+        });
     }
 
     /**

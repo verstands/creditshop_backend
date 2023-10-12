@@ -11,7 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('code_inscrip_pvcs', function (Blueprint $table) {
+            $table->id('ipvc');
+            $table->string('code_vendeur');
+            $table->string('code_agent');
+            $table->string('code_code');
+            $table->string('code_date');
+            $table->integer('code_etat');
+            $table->timestamps();
+        });
     }
 
     /**

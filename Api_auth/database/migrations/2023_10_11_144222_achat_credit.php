@@ -11,7 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('achat_credits', function (Blueprint $table) {
+            $table->id('ac');
+            $table->integer('client_ac');
+            $table->integer('montant_ac');
+            $table->integer('payer_ac');
+            $table->integer('etat_ac');
+            $table->timestamps();
+        });
     }
 
     /**

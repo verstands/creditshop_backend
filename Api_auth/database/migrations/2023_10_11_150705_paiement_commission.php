@@ -11,7 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('paiement_commissions', function (Blueprint $table) {
+            $table->id('pc');
+            $table->integer('paiement_agent_site');
+            $table->integer('paiement_montant');
+            $table->string('paiement_date');
+            $table->string('paiement_agent_chef');
+            $table->integer('paiement_vu_admin');
+            $table->integer('paiement_etat');
+            $table->timestamps();
+        });
     }
 
     /**

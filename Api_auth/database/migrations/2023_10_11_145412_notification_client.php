@@ -11,7 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('notification_clients', function (Blueprint $table) {
+            $table->id('notif_id');
+            $table->string('notif_recever');
+            $table->string('notif_sender');
+            $table->text('notif_message');
+            $table->string('notif_date');
+            $table->integer('notif_vu_client');
+            $table->integer('etat_notif');
+            $table->timestamps();
+        });
     }
 
     /**

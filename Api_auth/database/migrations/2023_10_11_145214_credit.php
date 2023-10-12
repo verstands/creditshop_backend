@@ -11,7 +11,26 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('credits', function (Blueprint $table) {
+            $table->id('credit_id');
+            $table->string('credit_identifiant');
+            $table->integer('credit_client');
+            $table->integer('credit_agent');
+            $table->integer('credit_montant');
+            $table->integer('credit_acompte');
+            $table->integer('credit_active');
+            $table->integer('credit_termine');
+            $table->string('credit_date_enreg');
+            $table->integer('credit_art_livre');
+            $table->string('credit_date_livre');
+            $table->integer('credit_activ_livre');
+            $table->integer('credit_livraison_etat');
+            $table->integer('credit_livraison_dispo');
+            $table->string('credit_agent_livre');
+            $table->string('credit_date_vrais_livre');
+            $table->integer('credit_etat');
+            $table->timestamps();
+        });
     }
 
     /**

@@ -11,7 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('historique_achat_credits', function (Blueprint $table) {
+            $table->id('ha');
+            $table->string('historique_client');
+            $table->string('historique_vendeur');
+            $table->string('historique_montant');
+            $table->string('historique_date');
+            $table->string('historique_etat');
+            $table->timestamps();
+        });
     }
 
     /**

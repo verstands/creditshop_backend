@@ -11,7 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('code_collecte_fonds', function (Blueprint $table) {
+            $table->id('ccf');
+            $table->string('code_agent');
+            $table->string('code_agent_chef');
+            $table->string('code_date');
+            $table->integer('code_etat');
+            $table->timestamps();
+        });
     }
 
     /**

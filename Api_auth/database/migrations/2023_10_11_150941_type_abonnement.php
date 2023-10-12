@@ -11,7 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('type_abonnements', function (Blueprint $table) {
+            $table->id('ta');
+            $table->string('type_ta');
+            $table->integer('etat_ta');
+            $table->timestamps();
+        });
     }
 
     /**
